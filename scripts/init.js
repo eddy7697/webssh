@@ -19,7 +19,7 @@ window.onload = function () {
   //document.title = titleExist ? params.title.concat(titleFix) : decodeURIComponent(params.ssh).split('@')[1].concat(titleFix);     
 
   GateOne.init({
-    url: 'https://term.pentium.network',
+    url: 'https://192.168.56.101',
     embedded: true,
     style: {'background-color': 'black'}
   });

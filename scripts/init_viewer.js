@@ -28,7 +28,7 @@ function urlParams() {
 
 window.onload = function () {
   GateOne.init({
-    url: 'https://term.pentium.network',
+    url: 'https://192.168.56.101',
     embedded: true,
     style: {'background-color': 'black'}
   });
