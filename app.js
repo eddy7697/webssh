@@ -7,8 +7,9 @@ var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var gateoneRouter = require('./routes/gateone');
 var gateoneLogRouter = require('./routes/gateone_log')
+var getGateoneLogRouter = require('./routes/get_gateone_log')
+var terminalRouter = require('./routes/terminal')
 
 var app = express();
 
@@ -30,8 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/gateone', gateoneRouter);
 app.use('/gateone_log', gateoneLogRouter);
+app.use('/get_gateone_log', getGateoneLogRouter);
+app.use('/terminal', terminalRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
