@@ -1,1 +1,1 @@
-# pentiom.gateone
+# pentiom - webssh
