@@ -3,7 +3,7 @@ var router      = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('route/terminal', { title: '98765' });
+  res.render('route/log_viewer', { title: '98765' });
 });
 
 module.exports = router;
