@@ -13,6 +13,7 @@
       GateOne.Events.on("pentium-gateone-trigger", function (con, arg) {
         if (arg[0].match("Gate One server round-trip")) {
           connect()
+          $('#loading-bar').hide();
         }
         if (arg[0].match("61.216.74.14")) {
           log();
