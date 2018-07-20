@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <title>Pentium WebSSH</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://192.168.56.101/static/gateone.js"></script>
+  <script src="https://term.pentium.network:80/scripts/gateone.js"></script>
   <script>
 
     GateOne.Base.superSandbox("GateOne.Terminal.Input", ["GateOne.Terminal", "GateOne.User", "GateOne.Input"], function(window, undefined) {
@@ -29,7 +29,7 @@
       //document.title = titleExist ? params.title.concat(titleFix) : decodeURIComponent(params.ssh).split('@')[1].concat(titleFix);     
 
       GateOne.init({
-        url: 'https://192.168.56.101',
+        url: 'https://term.pentium.network',
         embedded: true,
         style: {'background-color': 'black'}
       });
