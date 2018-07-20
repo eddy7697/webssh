@@ -14,33 +14,15 @@ block scriptsArea
           log();
         }
         $('#loading-bar').hide();
-        console.log('#{title}')
       });
     })
 
     window.onload = function () {
-      var params = urlParams();
-      var titleExist = 'title' in params;
-      var titleFix = ' - Pentium WebSSH';
-
-      //document.title = titleExist ? params.title.concat(titleFix) : decodeURIComponent(params.ssh).split('@')[1].concat(titleFix);     
-
       GateOne.init({
         url: 'https://term.pentium.network',
         embedded: true,
         style: {'background-color': 'black'}
       });
-    }
-
-    function urlParams() {
-      try {
-        var search = location.search.substring(1);
-        var params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
-
-        return params;
-      } catch (error) {
-        return {};
-      }        
     }
 
     /**
