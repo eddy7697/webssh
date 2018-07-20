@@ -1,5 +1,16 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block scriptsArea
+  script(src="/scripts/jquery-3.3.1.min.js")
+  script(src="/gateone.js") 
+  script
+    include ../../scripts/init.js
+
+block content  
+  #loading-bar
+    .bar
+      span 读取中...
+      br
+      img(src='/icon/loading-icon.svg', width='30')
+  #gateone_container(style='position: fixed; top: 0; left: 0; width: 100%; height: 100%;')
+    #gateone
