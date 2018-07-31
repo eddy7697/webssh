@@ -4,41 +4,17 @@ block scriptsArea
   script(src="/scripts/jquery-3.3.1.min.js")
   script(src="/gateone.js") 
   script.
-    GateOne.Base.superSandbox("GateOne.Terminal.Input", ["GateOne.Terminal", "GateOne.User", "GateOne.Input"], function(window, undefined) {
-      "use strict";
-      GateOne.Events.on("pentium-gateone-trigger", function (con, arg) {
-        if (arg[0].match("Gate One server round-trip")) {
-          connect()
+    window.onload = () => {
+      var initObj = {
+          url: 'https://term.pentium.network',
+          embedded: true,
+          showToolbar: false,
+          style: {'background-color': 'black'}
         }
-        if (arg[0].match("61.216.74.14")) {
-          log();
-        }
-        $('#loading-bar').hide();
-      });
-    })
-
-    window.onload = function () {
-      GateOne.init({
-        url: 'https://term.pentium.network',
-        embedded: true,
-        style: {'background-color': 'black'}
-      });
+        
+      GateOne.init(initObj);
     }
-
-    /**
-    * Terminal connection
-    */  
-    function connect() {
-      GateOne.SSH.connect('ssh://root@61.216.74.14:45003');
-    }
-
-    /**
-    * Log
-    */
-    function log() {
-      $('#loading-bar').hide();
-      console.log(GateOne.Terminal.terminals[1].created.getTime());
-    }
+    
 
 block content  
   #loading-bar
